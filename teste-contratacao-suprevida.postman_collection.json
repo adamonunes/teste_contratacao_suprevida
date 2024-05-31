@@ -1,0 +1,356 @@
+{
+	"info": {
+		"_postman_id": "c21061a4-1bb4-4883-9737-17decd0a2551",
+		"name": "teste-contratacao-suprevida",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8787534"
+	},
+	"item": [
+		{
+			"name": "Login Copy",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"suprevida_admin\",\r\n    \"password\": \"Suprevid@\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar usuário",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTdXByZXZpZGEiLCJpYXQiOjE3MTcxOTE0NzAsImV4cCI6MTcxNzIzNDY3MCwic3ViIjoic3VwcmV2aWRhX2FkbWluIn0.M1MPrvxuFtPezKtEUpESnktNESbwWFvrT5a8yk2bVs4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"customer\",\r\n    \"password\": \"1234567\",\r\n    \"role\":\"ROLE_CUSTOMER\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar usuário",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTdXByZXZpZGEiLCJpYXQiOjE3MTcxNzQ5MjQsImV4cCI6MTcxNzIxODEyNCwic3ViIjoic3VwcmV2aWRhX2FkbWluIn0.VAGeR2bi5iQO8m94hRA6QZ3gcd8z-7NPQ5rfdJakLRs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/users/5",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"users",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Todos usuários",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTdXByZXZpZGEiLCJpYXQiOjE3MTcxNzM4ODgsImV4cCI6MTcxNzIxNzA4OCwic3ViIjoic3VwcmV2aWRhX2FkbWluIn0.y2NyKNm1ZrqUqwwfDybhTDRNnnC5OhVxx_5fDuimwO8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"customer\",\r\n    \"password\": \"12345\",\r\n    \"role\":\"ROLE_CUSTOMER\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Um usuário",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTdXByZXZpZGEiLCJpYXQiOjE3MTcxNzQ5MjQsImV4cCI6MTcxNzIxODEyNCwic3ViIjoic3VwcmV2aWRhX2FkbWluIn0.VAGeR2bi5iQO8m94hRA6QZ3gcd8z-7NPQ5rfdJakLRs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Todos os Produtos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTdXByZXZpZGEiLCJpYXQiOjE3MTcxODMzMDAsImV4cCI6MTcxNzIyNjUwMCwic3ViIjoiY3VzdG9tZXIifQ.iAQeO5mJ14I8TRSnufALq9WAp5XCN4hLy79oedIKEGc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/produto",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"produto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Um Produto",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTdXByZXZpZGEiLCJpYXQiOjE3MTcxODMzMDAsImV4cCI6MTcxNzIyNjUwMCwic3ViIjoiY3VzdG9tZXIifQ.iAQeO5mJ14I8TRSnufALq9WAp5XCN4hLy79oedIKEGc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/produto/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"produto",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cria Produto",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTdXByZXZpZGEiLCJpYXQiOjE3MTcxOTE2MjIsImV4cCI6MTcxNzIzNDgyMiwic3ViIjoiY3VzdG9tZXIifQ.y8Ud8ONg8VoCsr__YW_lma5J6vNnYzvyAFEUCCPwcoM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\":\"Mouse\",\r\n    \"descricao\":\"logitech\",\r\n    \"preco\": 123.45\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/produto",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"produto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Altera Produto",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTdXByZXZpZGEiLCJpYXQiOjE3MTcxODMzMDAsImV4cCI6MTcxNzIyNjUwMCwic3ViIjoiY3VzdG9tZXIifQ.iAQeO5mJ14I8TRSnufALq9WAp5XCN4hLy79oedIKEGc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"descricao\":\"logitech chique\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/produto/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"produto",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deleta Produto",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTdXByZXZpZGEiLCJpYXQiOjE3MTcxOTE2MjIsImV4cCI6MTcxNzIzNDgyMiwic3ViIjoiY3VzdG9tZXIifQ.y8Ud8ONg8VoCsr__YW_lma5J6vNnYzvyAFEUCCPwcoM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/produto/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"produto",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
