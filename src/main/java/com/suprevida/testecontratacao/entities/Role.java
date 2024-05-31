@@ -30,4 +30,7 @@ public class Role {
     @Enumerated(EnumType.STRING)
     private RoleName name;
 
+    public Role(RoleName name) {
+    	this.name = name;
+    }
 }

@@ -15,9 +15,11 @@ import com.suprevida.testecontratacao.security.UserDetailsImpl;
 @Service
 public class JwtTokenService {
 
-    private static final String SECRET_KEY = "4Z^XrroxR@dWxqf$mTTKwW$!@#qGr4P"; // Chave secreta utilizada para gerar e verificar o token
+    private static final String SECRET_KEY = "Y29udHJhdGFjYW9TdXByZXZpZGE="; // Chave secreta utilizada para gerar e verificar o token
 
-    private static final String ISSUER = "pizzurg-api"; // Emissor do token
+    private static final String ISSUER = "Suprevida"; // Emissor do token
+    
+    private static final Long EXPERITION_TOKEN = 12L;
 
     public String generateToken(UserDetailsImpl user) {
         try {
@@ -49,12 +51,12 @@ public class JwtTokenService {
     }
 
     private Instant creationDate() {
-        return ZonedDateTime.now(ZoneId.of("America/Recife")).toInstant();
+        return ZonedDateTime.now(ZoneId.of("America/Sao_Paulo")).toInstant();
 //        America/Sao_Paulo
     }
 
     private Instant expirationDate() {
-        return ZonedDateTime.now(ZoneId.of("America/Recife")).plusHours(4).toInstant();
+        return ZonedDateTime.now(ZoneId.of("America/Sao_Paulo")).plusHours(EXPERITION_TOKEN).toInstant();
     }
 
 }

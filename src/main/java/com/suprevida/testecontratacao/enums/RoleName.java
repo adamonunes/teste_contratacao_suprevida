@@ -2,6 +2,6 @@ package com.suprevida.testecontratacao.enums;
 
 public enum RoleName {
 
-	ROLE_ADMINISTRATOR,
+	ROLE_ADMIN,
 	ROLE_CUSTOMER
 }

@@ -7,7 +7,7 @@ import com.suprevida.testecontratacao.entities.Role;
 public record RecoveryUserDto(
 
         Long id,
-        String email,
+        String name,
         List<Role> roles
 
 ) {

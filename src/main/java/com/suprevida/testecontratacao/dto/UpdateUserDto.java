@@ -2,8 +2,7 @@ package com.suprevida.testecontratacao.dto;
 
 import com.suprevida.testecontratacao.enums.RoleName;
 
-public record CreateUserDto(
-        String name,
+public record UpdateUserDto(
         String password,
         RoleName role
 ) {
