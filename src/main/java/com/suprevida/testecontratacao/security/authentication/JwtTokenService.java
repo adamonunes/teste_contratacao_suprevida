@@ -27,7 +27,7 @@ public class JwtTokenService {
             return JWT.create()
                     .withIssuer(ISSUER) 
                     .withIssuedAt(creationDate()) 
-                    .withExpiresAt(expirationDate()) 
+                    //.withExpiresAt(expirationDate()) 
                     .withSubject(user.getUsername()) 
                     .sign(algorithm); 
         } catch (JWTCreationException exception){
